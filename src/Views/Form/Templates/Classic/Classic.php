@@ -114,6 +114,11 @@ class Classic extends Template implements Hookable, Scriptable
             }, 10000);
         }
 
+        // Add classic template class
+        add_filter('give_form_wrap_classes', function ($classes) {
+            array_push($classes, 'give-classic-template-wrap');
+            return $classes;
+        });
         /**
          * Remove actions
          */
